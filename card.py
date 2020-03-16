@@ -1,13 +1,21 @@
 class Card():
-    def __init__(self, cardType, value):
-        self.cardType = cardType
+    def __init__(self, value):
         self.value = value
 
-    def action(self):
-        if(self.cardType == 'god'):
-            pass
-            #TODO
-        elif(self.cardType == 'num'):
-            pass
-            #TODO
+    def __eq__(self,other):
+        if not isinstance(other,Card):
+            return NotImplemented
+        else:
+            return (self.value == other.value)
+    
+    def __str__(self):
+        return(str(self.value))
+
+class numCard(Card):
+    def __init__(self, value):
+        self.value = value
+
+class godCard(Card):
+    def __init__(self, value):
+        self.value = value
 
