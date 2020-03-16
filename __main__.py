@@ -1,5 +1,4 @@
-import zeus
+from zeus import *
 
 if __name__ == "__main__":
-    game = zeus.Zeus()
-    game.play()
+    Zeus().play()
